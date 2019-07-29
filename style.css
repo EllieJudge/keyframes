@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+#c1{
+    height: 100vh;;
+    background-color: palegoldenrod;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#fbImg, #thumbImg, #twitterImg, #instaImg {
+    width: 100px;
+}
+
+
+/* facebook thumb image spins */
+#thumbImg:hover {
+    animation: thumbDown;
+    animation-duration: 7s;
+}
+/* animation for facebook thumb image spin */
+@keyframes thumbDown {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* declares sprite twitter image/animation slide in */
+#twitterSprite {
+    animation: slideIn;
+    animation-duration: 5s;
+    height: 150px;
+    width: 150px;
+    background-image: url(imgs/twitter-sprite.png);
+    border-radius: 20px;
+}
+
+/* code nation logo stretches on hover */
+#cnImg:hover {
+    animation: stretch;
+    animation-duration: 3s;
+}
+/* stretches small to big */
+@keyframes stretch {
+    0% {
+        width: 373px;
+    }
+    
+    50% {
+        width: 750px;
+    }
+    
+    100%{
+        width: 373px;
+    }
+}
+
+/* insta image slides in from left */
+#instaImg {
+    animation: slideIn;
+    animation-duration: 7s;
+}
+/* slide in from left */
+@keyframes slideIn {
+    from {
+        transform: translate(-2000px);
+    }
+    to {
+        transform: translate(1000px);
+    }
+}
+
+/* fb img and thumb slide in from right  */
+#fbImg{
+    animation: slideInReverse;
+    animation-duration: 5s;
+}
+
+#thumbImg {
+    animation: slideInReverse;
+    animation-duration: 6s;
+}
+/* slide in from left */
+@keyframes slideInReverse {
+    from {
+        transform: translate(2000px);
+    }
+    to {
+        transform: translate(-1000px);
+    }
+}
+
+
